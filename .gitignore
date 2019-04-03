@@ -1,3 +1,15 @@
+# IDE
+.idea
+
+# Virtualenv
+venv*/
+
+# Collected static files
+static/*
+!static/README.MD
+
+
+
 # Created by https://www.gitignore.io
 
 ### OSX ###
