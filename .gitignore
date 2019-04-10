@@ -8,6 +8,9 @@ venv*/
 static/*
 !static/README.MD
 
+media/*
+!media/README.MD
+
 
 
 # Created by https://www.gitignore.io
