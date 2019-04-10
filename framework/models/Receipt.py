@@ -1,8 +1,10 @@
+import uuid
+
 from django.db import models
 
 
 class Receipt(models.Model):
-    receipt_id = models.UUIDField()
+    receipt_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     store = models.CharField(max_length=64)
     purchase_date = models.DateField()
     date_updated = models.DateField()
