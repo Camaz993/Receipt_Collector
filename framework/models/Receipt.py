@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Receipt(models.Model):
     receipt_id = models.UUIDField()
     store = models.CharField(max_length=64)
