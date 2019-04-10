@@ -1,11 +1,12 @@
 from django.conf.urls import url, include
 from rest_framework import routers
-from framework.views import CategoryViewSet
+from framework.views import CategoryViewSet, ReceiptViewSet
 
 app_name = 'framework'
 
 router = routers.DefaultRouter()
 router.register(r'categories', CategoryViewSet)
+router.register(r'receipt', ReceiptViewSet)
 
 
 # Wire up our API using automatic URL routing.

@@ -1,1 +1,2 @@
 from framework.serializers.CategorySerializer import CategorySerializer
+from framework.serializers.ReceiptSerializer import ReceiptSerializer
