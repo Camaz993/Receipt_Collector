@@ -1,69 +1,15 @@
-{% load static %}
+{% extends 'frontend/_layout.html' %}
+{% block title %}Receipt Collector - Index{% endblock title %}
 
+{% block container %}
 
-{# ripped from https://bootswatch.com/lumen/ with dependencies fixed#}
-{#  nb popper.js isn't included so tooltips aren't functional #}
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Receipt Collector</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="{% static 'frontend/css/bootstrap.css' %}" media="screen">
-    {# <link rel="stylesheet" href="../_assets/css/custom.min.css"> #}
-
-  </head>
-  <body>
-    <div class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
-      <div class="container">
-        <a href="../" class="navbar-brand">Receipt Collector</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-
-            <li class="nav-item"><a class="nav-link" href="/api">API</a></li>
-            <li class="nav-item"><a class="nav-link" href="{% url 'frontend:elements' %}">Theme Elements</a></li>
-            <li class="nav-item"><a class="nav-link" href="/admin">Django Admin</a></li>
-
-
-          </ul>
-
-
+    <h2>Welcome to Receipt Collector</h2>
+    <footer id="footer">
+    <div class="row">
+        <div class="col-lg-12">
 
         </div>
-      </div>
     </div>
 
-
-    <div class="container">
-
-
-
-
-
-      <footer id="footer">
-        <div class="row">
-          <div class="col-lg-12">
-
-          </div>
-        </div>
-
-      </footer>
-
-
-    </div>
-
-
-
-    <script
-			  src="https://code.jquery.com/jquery-3.3.1.min.js"
-			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-			  crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-  </body>
-</html>
+    </footer>
+{% endblock container %}
