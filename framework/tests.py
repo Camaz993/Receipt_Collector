@@ -1,3 +1,5 @@
+import self as self
+from django.db.models import QuerySet
 from django.test import TestCase
 
 # Create your tests here.
@@ -5,6 +7,8 @@ from django.test import TestCase
 from django.urls import reverse
 from rest_framework.test import APITestCase, APIClient
 from rest_framework.views import status
+
+from framework.models import Category
 from .models import Category
 from .serializers import CategorySerializer
 
@@ -27,10 +31,9 @@ class BaseViewTest(APITestCase):
 """
 
 class GetAllCategoriesTest(BaseViewTest):
-
     def test_Categories(self):
-        return True
-    ''' response = self.client.get(
+
+        response = self.client.get(
             reverse("categories-all", kwargs={"version": "v1"})
         )
 
@@ -38,4 +41,4 @@ class GetAllCategoriesTest(BaseViewTest):
         serialized = CategorySerializer(expected, many=True)
         self.assertEqual(response.data, serialized.data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-    '''
+
